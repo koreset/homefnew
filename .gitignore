@@ -1,0 +1,6 @@
+test-results/
+tmp/
+routes/
+public/content
+.DS_Store
+.idea/*

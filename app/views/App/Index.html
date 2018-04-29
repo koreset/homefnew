@@ -1,0 +1,64 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+
+<!--data start -->
+<div class="container blogging-style">
+    <div class="row">
+        <!-- hot news start -->
+        <!-- <div class="col-sm-16 hot-news hidden-xs">
+            <div class="row">
+                <div class="col-sm-15"><span class="ion-ios7-timer icon-news pull-left"></span>
+                    <ul id="js-news" class="js-hidden">
+                        <li class="news-item"><a href="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Aenean commodo ligula eget dolor</a></li>
+                        <li class="news-item"><a href="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium</a></li>
+                        <li class="news-item"><a href="">Donec quam felis, ultricies nec, pellentesque eu</a></li>
+                        <li class="news-item"><a href="">Nulla consequat massa quis enim. Donec pede justo,
+                            fringilla</a></li>
+                        <li class="news-item"><a href=""> Donec pede justo, fringilla vel, aliquet nec, vulputate eget
+                            ultricies nec, pellentesque</a></li>
+                        <li class="news-item"><a href="">In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                            justo</a></li>
+                        <li class="news-item"><a href="">Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                            natoque penatibus et magnis </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-1 shuffle text-right"><a href="#"><span class="ion-shuffle"></span></a></div>
+            </div>
+        </div> -->
+        <!-- hot news end -->
+
+        <!-- mid sec start -->
+        <div class="col-lg-3 col-md-4 col-sm-5 mid-sec top-margin pull-left">
+            <div class="row">
+                <!-- menu start -->
+                {{ template "sidemenu" . }}
+                <!-- menu end -->
+                <!-- videos start -->
+                {{ template "videos" .videos}}
+                <!-- videos start -->
+                <!-- must read start -->
+                {{ template "mustread" .latestArticles}}
+                <!-- must read start -->
+            </div>
+        </div>
+        <!-- mid sec end -->
+        <!-- left sec start -->
+        <div class="col-lg-8 col-md-7 col-sm-6 col-xs-16 pull-left">
+            <div class="row">
+                <!-- big thumbs start -->
+              {{ range .posts }}
+                {{ template "activity_card" .}}
+              {{ end }}
+            </div>
+        </div>
+        <!-- left sec end -->
+        <!-- right sec start -->
+        {{ template "right-sec" .}}
+        <!-- right sec end -->
+    </div>
+</div>
+<!-- data end -->
+{{template "footer.html" .}}

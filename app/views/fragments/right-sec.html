@@ -1,0 +1,19 @@
+{{ define "right-sec"}}
+<div class="col-sm-5 hidden-xs right-sec top-margin">
+    <div class="bordered">
+        <div class="row ">
+            {{ template "newsfeed" .newsfeed}}
+            {{ template "social" .}}
+            <!-- activities start -->
+            {{ template "activities" .}}
+            <!-- activities end -->
+            <!-- calendar start -->
+            {{ template "calendar" . }}
+            <!-- calendar end -->
+            <!-- flicker imgs start -->
+            {{ template "flicker"}}
+            <!-- flicker imgs end -->
+        </div>
+    </div>
+</div>
+{{ end }}
