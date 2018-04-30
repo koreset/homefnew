@@ -1,0 +1,10 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+<div class="container blogging-style">
+    <div class="row">
+        <h4>{{ .post.Title }}</h4>
+        <p>Hello Out there... Post ID is {{.post.ID}} </p>
+
+    </div>
+</div>
+{{template "footer.html" .}}
