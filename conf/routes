@@ -9,6 +9,7 @@ module:testrunner
 
 GET     /                                       App.Index
 GET     /content                                App.GetContent
+GET     /health                                 App.CheckHealth
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

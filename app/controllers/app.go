@@ -20,3 +20,7 @@ func (c App) Index() revel.Result {
 func (c App) GetContent() revel.Result {
 	return c.Render()
 }
+
+func (c App) CheckHealth() revel.Result {
+	return c.RenderJSON("OK")
+}
