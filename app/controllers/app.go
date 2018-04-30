@@ -27,7 +27,9 @@ func (c App) GetContent() revel.Result {
 
 func (c App) GetPost(postid int) revel.Result {
 	post := services.GetPost(postid)
-	return c.Render(post)
+	newsfeed := services.GetNewsFeed()
+
+	return c.Render(post, newsfeed)
 }
 
 func (c App) CheckHealth() revel.Result {

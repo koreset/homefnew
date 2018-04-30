@@ -31,6 +31,8 @@ func GetVideos() []models.Post {
 func GetPost(postid int) models.Post{
 	var post models.Post
 	gorm.DB.Where("id = ? ", postid).Preload("Images").Preload("Links").Preload("Videos").First(&post)
+
+	fmt.Println(post)
 	return post
 }
 
