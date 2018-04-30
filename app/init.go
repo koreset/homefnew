@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Masterminds/sprig"
-	"github.com/leekchan/gtf"
+	"github.com/koreset/gtf"
 	"github.com/revel/revel"
 )
 
