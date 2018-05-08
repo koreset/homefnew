@@ -41,9 +41,14 @@ func GetPublications() []models.Post {
 	gorm.DB.LogMode(true)
 	gorm.DB.Where("type = 'publication'").Preload("Images").Preload("Links").Order("created desc").Find(&publications)
 
-	for i, pub := range publications {
-		fmt.Println("Index: ", i)
-		fmt.Println(pub)
+	for _, pub := range publications {
+		fmt.Println(pub.Images[0].Url, pub.ID)
 	}
 	return publications
+}
+
+func GetPublication(postid int) models.Post  {
+	var pub models.Post
+	gorm.DB.Where("id = ?", postid).Preload("Images").Preload("Videos").Preload("Links").First(&pub)
+	return pub
 }

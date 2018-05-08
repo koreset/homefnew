@@ -354,6 +354,7 @@ blockquote p {
 .img-thumbnail {
 	background-color: #f8f8f8;
 	border: 1px solid #ededed;
+	object-fit: contain;
 }
 .text-danger {
 	color: #3fc997;
@@ -2431,4 +2432,10 @@ footer .stars {
 /* Additional styles for Homef  */
 .sticky-header {
 	background-color: #ccc;
+}
+
+.pub-img-thumbnail {
+	width: 400px;
+	height: 400px;
+	object-fit: contain;
 }

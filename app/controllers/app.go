@@ -21,9 +21,6 @@ func (c App) Index() revel.Result {
 	return c.Render(posts, newsfeed, videos, publications)
 }
 
-func (c App) GetContent() revel.Result {
-	return c.Render()
-}
 
 func (c App) GetPost(postid int) revel.Result {
 	post := services.GetPost(postid)
